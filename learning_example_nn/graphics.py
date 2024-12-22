@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
-
+import os
 # Imports from own programs
 from gen_learn_data import generate_data
-from learning_example_nn.inference import get_values_of_model
+from inference import get_values_of_model
 
 def make_img(name, epoch=''):
     #get data
@@ -35,8 +35,11 @@ def make_img(name, epoch=''):
     plt.xlabel('x-values')
     plt.ylabel('y-values')
 
+    #create image folder if needed
+    if not os.path.exists("images"):
+        os.makedirs("images")
     #save to an image folder
-    plt.savefig(f'learning_example_nn\\images\\{name}.png') 
+    plt.savefig(f'images\\{name}.png') 
     
     #close to free memory
     plt.close()
