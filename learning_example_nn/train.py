@@ -27,4 +27,4 @@ def train_model(epochs):
     model.fit(x_train, y_train, epochs=epochs, batch_size=10, verbose=0)
 
     #save it 
-    model.save(f'learning_example_nn\\graph.keras')
+    model.save('graph.keras')
