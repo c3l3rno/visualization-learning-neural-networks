@@ -3,7 +3,7 @@ from tensorflow import keras
 from tensorflow import range, expand_dims, stack, squeeze #only import the things we need to improve performance
 
 model = None
-model_path = 'learning_example_nn\\graph.keras'
+model_path = 'graph.keras'
 
 def inference(input_tensor):
     prediction = model(input_tensor, training=False)
